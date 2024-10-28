@@ -1,14 +1,14 @@
 pipeline {
   agent any
   stages {
-    stage('version') {
+    stage('Demo1') {
       steps {
-        bat 'python --version'
+             echo 'Demo1.py'
       }
     }
-    stage('hello') {
+    stage('Demo2') {
       steps {
-        bat 'python hello.py'
+        echo 'Demo2.py'
       }
     }
   }
