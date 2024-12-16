@@ -11,5 +11,10 @@ pipeline {
         echo 'hello.py'
       }
     }
+    stage('Demo3') {
+      steps {
+        echo 'hello.py'
+      }
+    }
   }
 }
