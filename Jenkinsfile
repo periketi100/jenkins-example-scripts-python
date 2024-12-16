@@ -1,17 +1,17 @@
 pipeline {
   agent any
   stages {
-    stage('Demo1') {
+    stage('Build') {
       steps {
              echo 'hello.py'
       }
     }
-    stage('Demo2') {
+    stage('Test') {
       steps {
         echo 'hello.py'
       }
     }
-    stage('Demo3') {
+    stage('Deploy') {
       steps {
         echo 'hello.py'
       }
