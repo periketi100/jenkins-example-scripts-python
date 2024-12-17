@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Collect new data of python') {
       steps {
-             echo 'hello.py'
+             echo ' hello.py'
       }
     }
     stage('Validate new data of python') {
