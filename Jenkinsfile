@@ -1,17 +1,17 @@
 pipeline {
   agent any
   stages {
-    stage('Datacollect') {
+    stage('Collect') {
       steps {
              echo 'hello.py'
       }
     }
-    stage('DataValidation') {
+    stage('Validation') {
       steps {
         echo 'hello.py'
       }
     }
-    stage('Deploy Data Pipeline') {
+    stage('Deploy') {
       steps {
         echo 'hello.py'
       }
