@@ -1,14 +1,19 @@
 pipeline {
   agent any
   stages {
-    stage('version') {
+    stage('Datacollect') {
       steps {
-        sh 'python3 --version'
+             echo 'hello.py'
       }
     }
-    stage('hello') {
+    stage('DataValidation') {
       steps {
-        sh 'python3 hello.py'
+        echo 'hello.py'
+      }
+    }
+    stage('Deploy Data Pipeline') {
+      steps {
+        echo 'hello.py'
       }
     }
   }
