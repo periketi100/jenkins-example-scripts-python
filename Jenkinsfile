@@ -1,14 +1,19 @@
 pipeline {
   agent any
   stages {
-    stage('version') {
+    stage('Collect new data of python') {
       steps {
-        sh 'python3 --version'
+             echo ' hello.py'
       }
     }
-    stage('hello') {
+    stage('Validate new data of python') {
       steps {
-        sh 'python3 hello.py'
+        echo 'hello.py'
+      }
+    }
+    stage('Deploy new Pipeline of python') {
+      steps {
+        echo 'hello.py'
       }
     }
   }
