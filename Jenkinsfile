@@ -4,7 +4,7 @@ pipeline {
     stage('version') {
       steps {
         sh 'python3 --version'
-        sh 'pip install requests'
+        sh 'pip3 install requests'
       }
     }
     stage('cds') {
