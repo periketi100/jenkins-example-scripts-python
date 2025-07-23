@@ -1,7 +1,7 @@
 import requests
 import json
 
-bearer_token = "ZWQ4M2U5OTUtNDkyZS00MzY3LTg3YmMtNjFiM2RjZmU0OTVi"
+bearer_token = "NjhlNmRkMGUtYmI2OC00NmRkLTg4MzktZTMyYTdlOGVjMjZh"
 
 headers = {"Authorization": "Bearer {}".format(bearer_token)}
 
