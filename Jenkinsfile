@@ -10,7 +10,7 @@ pipeline {
     }
     stage('cds') {
       steps {
-        sh 'python cds.py'
+        sh 'python3 cds.py'
       }
     }
   }
