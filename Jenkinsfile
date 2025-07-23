@@ -6,7 +6,7 @@ pipeline {
         sh 'python3 --version'
       }
     }
-    stage('hello') {
+    stage('cds') {
       steps {
         sh 'python3 cds.py'
       }
