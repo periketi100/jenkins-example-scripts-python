@@ -16,7 +16,7 @@ pipeline {
               -H "Content-Length: 0" \\
               "${baseUrl}/services?env=design&type=kafka" | \\
             jq -r '[ .[] | { id: .id, serviceId: .serviceId } | select(.serviceId | startswith("cds-")) ] | .[].id' | \\
-            xargs -I {} curl -s -X GET \\
+            xargs -I {} curl -s -X DELETE \\
               -H "Authorization: Bearer ${authToken}" \\
               -H "Content-Length: 0" \\
               "${baseUrl}/services/{}"
