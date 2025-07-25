@@ -6,7 +6,8 @@ pipeline {
       steps {
         script {
           // Define auth token and base URL as variables (for reusability and maintainability)
-          def authToken = "MTQ5MmYzZTctZDYxZC00ZjVjLTgwMWMtNzk3OTgzMjRlNWZk"
+          def authToken = params.USER_ACCESS_TOKEN
+          echo "The USER_ACCESS_TOKEN is : "+authToken
           def baseUrl = "https://console.dms.ort.usw2.ficoanalyticcloud.com/com.fico.dmp.manager/rest/dmp/runtime/solutions/d0ny74319"
 
           // Use shell commands to fetch and process data
