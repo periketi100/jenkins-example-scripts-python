@@ -9,6 +9,7 @@ pipeline {
           def authToken = params.USER_ACCESS_TOKEN
           def solutionId = params.SolutionID
           def topicName = "cds-"+params.TopicName
+          def lcm_environment = "params.LCM_Environment
           
           echo "The USER_ACCESS_TOKEN is : "+authToken
           
@@ -23,7 +24,7 @@ pipeline {
             curl -s -X GET \\
               -H "Authorization: Bearer ${authToken}" \\
               -H "Content-Length: 0" \\
-              "${baseUrl}/services?env=design&type=kafka" | \\
+              "${baseUrl}/services?env=${lcm_environment}&type=kafka" | \\
             jq -r '[ .[] | { id: .id, serviceId: .serviceId } | select(.serviceId | startswith(${topicName})) ] | .[].id' | \\
             xargs -I {} curl -s -X DELETE \\
               -H "Authorization: Bearer ${authToken}" \\
