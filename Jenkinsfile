@@ -25,7 +25,7 @@ pipeline {
               -H "Authorization: Bearer ${authToken}" \\
               -H "Content-Length: 0" \\
               "${baseUrl}/services?env=${lcm_environment}&type=kafka" | \\
-            jq -r '[ .[] | { id: .id, serviceId: .serviceId } | select(.serviceId | startswith(${topicName})) ] | .[].id' | \\
+            jq -r '[ .[] | { id: .id, serviceId: .serviceId } | select(.serviceId | startswith("${topicName}")) ] | .[].id' | \\
             xargs -I {} curl -s -X DELETE \\
               -H "Authorization: Bearer ${authToken}" \\
               -H "Content-Length: 0" \\
