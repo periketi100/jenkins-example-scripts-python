@@ -15,7 +15,8 @@ pipeline {
           def baseUrl = "https://console.dms.ort.usw2.ficoanalyticcloud.com/com.fico.dmp.manager/rest/dmp/runtime/solutions/"+solutionId
 
           echo "The Base URL is : "+baseUrl
-          
+
+                
 
           // Use shell commands to fetch and process data
           sh """
