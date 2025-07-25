@@ -9,7 +9,7 @@ pipeline {
           def authToken = params.USER_ACCESS_TOKEN
           def solutionId = params.SolutionID
           def topicName = "cds-"+params.TopicName
-          def lcm_environment = "params.LCM_Environment
+          def lcm_environment = params.LCM_Environment
           
           echo "The USER_ACCESS_TOKEN is : "+authToken
           
